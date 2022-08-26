@@ -1,11 +1,11 @@
 package implementing_queue;
 
-public class IntegerQueue {
+public class Queue {
 	private int size;
 	private int queue[];
 	private int front, rear;
 
-	public IntegerQueue(int size) {
+	public Queue(int size) {
 		this.size = size;
 		queue = new int[size];
 		front = -1;
@@ -68,7 +68,7 @@ public class IntegerQueue {
 	}
 
 	public static void main(String[] args) {
-		IntegerQueue queue = new IntegerQueue(3);
+		Queue queue = new Queue(3);
 
 		queue.printQueue();
 

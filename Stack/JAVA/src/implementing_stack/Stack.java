@@ -1,11 +1,11 @@
 package implementing_stack;
 
-public class IntegerStack {
+public class Stack {
 	private int top;
 	private int size;
 	private int stack[];
 
-	IntegerStack(int size) {
+	Stack(int size) {
 		this.size = size; // stack's wanted size
 		this.stack = new int[this.size];
 		top = -1; // initialized to -1 in order to check whether the stack is empty or not
@@ -62,7 +62,7 @@ public class IntegerStack {
 	}
 
 	public static void main(String[] args) {
-		IntegerStack stack = new IntegerStack(3);
+		Stack stack = new Stack(3);
 
 		stack.printStack();
 		

@@ -1,11 +1,11 @@
 package implementing_queue;
 
-public class IntegerCircularQueue {
+public class CircularQueue {
 	private int size;
 	private int Cqueue[];
 	private int front, rear;
 
-	public IntegerCircularQueue(int size) {
+	public CircularQueue(int size) {
 		this.size = size;
 		Cqueue = new int[size];
 		front = -1;
@@ -73,7 +73,7 @@ public class IntegerCircularQueue {
 	}
 
 	public static void main(String[] args) {
-		IntegerCircularQueue cQueue = new IntegerCircularQueue(3);
+		CircularQueue cQueue = new CircularQueue(3);
 
 		cQueue.printCQueue();
 
