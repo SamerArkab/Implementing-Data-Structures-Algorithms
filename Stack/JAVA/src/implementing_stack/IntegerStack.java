@@ -13,9 +13,8 @@ public class IntegerStack {
 
 	public void push(int newTop) {
 		if (isFull()) {
-			System.out.println("Stack is full. Overflow error!");
-			System.exit(1);
-			;
+			System.out.println("Stack is full. Can't push new value, " + newTop);
+			return;
 		}
 
 		stack[++top] = newTop; // increase top by one then add newTop to stack[top]
@@ -24,9 +23,8 @@ public class IntegerStack {
 
 	public int pop() {
 		if (isEmpty()) {
-			System.out.println("Stack is empty. System exit!");
-			System.exit(1);
-			;
+			System.out.println("Stack is empty.");
+			return -1;
 		}
 
 		System.out.println("Pop and return top integer: " + stack[top] + "\nNew top integer is: " + stack[top - 1]);
@@ -35,9 +33,8 @@ public class IntegerStack {
 
 	public int peek() {
 		if (isEmpty()) {
-			System.out.println("Stack is empty. System exit!");
-			System.exit(1);
-			;
+			System.out.println("Stack is empty.");
+			return -1;
 		}
 
 		System.out.println("Top integer is: " + stack[top]);
@@ -54,6 +51,11 @@ public class IntegerStack {
 
 	public void printStack() {
 		System.out.println("Printing stack: ");
+		if (isEmpty()) {
+			System.out.println("Stack is empty.");
+			return;
+		}
+		
 		for (int i = 0; i <= top; i++)
 			System.out.println(stack[i]);
 	}
@@ -61,6 +63,8 @@ public class IntegerStack {
 	public static void main(String[] args) {
 		IntegerStack stack = new IntegerStack(3);
 
+		stack.printStack();
+		
 		stack.push(1);
 		stack.push(2);
 		stack.push(3);
@@ -73,5 +77,7 @@ public class IntegerStack {
 
 		stack.push(3);
 		stack.push(4);
+		
+		stack.printStack();
 	}
 }
