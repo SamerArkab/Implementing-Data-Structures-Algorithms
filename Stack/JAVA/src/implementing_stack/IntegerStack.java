@@ -57,7 +57,8 @@ public class IntegerStack {
 		}
 		
 		for (int i = 0; i <= top; i++)
-			System.out.println(stack[i]);
+			System.out.print(stack[i] + "	");
+		System.out.println();
 	}
 
 	public static void main(String[] args) {

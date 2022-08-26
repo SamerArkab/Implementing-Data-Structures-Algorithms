@@ -3,8 +3,7 @@ package implementing_queue;
 public class IntegerQueue {
 	private int size;
 	private int queue[];
-	private int front;
-	private int rear;
+	private int front, rear;
 
 	public IntegerQueue(int size) {
 		this.size = size;
@@ -34,7 +33,7 @@ public class IntegerQueue {
 
 		int elementToRet = queue[front];
 		System.out.println("Front element removed from queue (dequeued): " + queue[front]);
-		if (front >= rear) { // queue contains one element
+		if (front == rear) { // queue contains one element
 			front = -1;
 			rear = -1;
 		} else
@@ -64,7 +63,8 @@ public class IntegerQueue {
 			return;
 		}
 		for (int i = front; i <= rear; i++)
-			System.out.println(queue[i]);
+			System.out.print(queue[i] + "	");
+		System.out.println();
 	}
 
 	public static void main(String[] args) {
