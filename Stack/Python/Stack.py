@@ -27,7 +27,7 @@ def peek(stack_peek):
         print("Stack is empty. ", end='')
         return
     else:
-        return stack_peek[0]
+        return stack_peek[-1:]
 
 
 def print_stack(stack_print):
@@ -37,13 +37,14 @@ def print_stack(stack_print):
     print()
 
 
-size = input("Enter stack size: ")
-size = int(size)
-stack = [] * size
+size = int(input("Enter stack size: "))
+stack = []
+
 print(is_empty(stack))
 print("Item popped: " + str(pop(stack)))
 push(stack, str(11), size)
 push(stack, str(12), size)
+print_stack(stack)
 push(stack, str(13), size)
 print(is_full(stack, size))
 
@@ -55,4 +56,5 @@ print("Item popped: " + str(pop(stack)))
 push(stack, str(15), size)
 print_stack(stack)
 push(stack, str(16), size)
+print_stack(stack)
 print("Peek top item: " + str(peek(stack)))
