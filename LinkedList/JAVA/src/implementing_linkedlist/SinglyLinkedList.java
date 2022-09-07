@@ -52,7 +52,7 @@ public class SinglyLinkedList {
 
 	public void deleteByPosition(int position) {
 		if (head == null) {
-			System.out.println("Can't delete a non existant LL.");
+			System.out.println("Can't delete a non existent LL.");
 			return;
 		}
 

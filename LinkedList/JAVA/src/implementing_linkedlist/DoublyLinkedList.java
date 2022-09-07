@@ -69,6 +69,7 @@ public class DoublyLinkedList {
 
 		if (position == 0) {
 			head = iterHead.next; // iterate to the next node, meaning to delete first (head) node
+			head.prev = null;
 			return;
 		}
 
