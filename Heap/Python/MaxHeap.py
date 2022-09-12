@@ -1,14 +1,14 @@
-def heapify(arr, num, i):
+def heapify(arr, size, i):
     largest = i
     left = 2 * i + 1
     right = 2 * i + 2
-    if left < num and arr[i] < arr[left]:
+    if left < size and arr[i] < arr[left]:
         largest = left
-    if right < num and arr[i] < arr[right]:
+    if right < size and arr[i] < arr[right]:
         largest = right
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]  # Swap
-        heapify(arr, num, largest)
+        heapify(arr, size, largest)
 
 
 def insert(arr, num):
